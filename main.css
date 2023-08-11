@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.die {
+    width: 180px;
+    height: 180px;
+    border: 8px solid #FF8080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+}
+.die-animation { animation: tilt-shaking 140ms; }
+
+.result {
+    user-select: none;
+    color: #FF8080;
+    font-size: 120px;
+}
+.result-animation { animation: fade-in 700ms; }
+
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
