@@ -1,24 +1,36 @@
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-size: 40px 40px;
+    background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
+
+.dice-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+}
+
 .die {
-    width: 180px;
-    height: 180px;
-    border: 8px solid #FF8080;
+    width: 90px;
+    height: 90px;
+    margin: 8px;
+    background-color: #ff0379;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-
+    border-radius: 8px;
+    cursor: pointer;
 }
 .die-animation { animation: tilt-shaking 140ms; }
 
 .result {
     user-select: none;
-    color: #FF8080;
-    font-size: 120px;
+    color: white;
+    font-size: 60px;
 }
 .result-animation { animation: fade-in 700ms; }
 
