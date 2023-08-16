@@ -1,28 +1,32 @@
 body {
-    display: flex;
-    justify-content: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: 40px 40px;
     background-image:
     linear-gradient(to right, grey 1px, transparent 1px),
     linear-gradient(to bottom, grey 1px, transparent 1px);
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+h1 {
+    font-size: 3cqw;
 }
 
 .dice-container{
     display: flex;
-    flex-wrap: wrap;
     width: 40vw;
+    flex-wrap: wrap;
 }
 
 .die {
-    width: 90px;
-    height: 90px;
-    margin: 8px;
+    width: 6vw;
+    height: 6vw;
+    margin: 1vw;
     background-color: #ff0379;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
     cursor: pointer;
 }
 .die-animation { animation: tilt-shaking 140ms; }
@@ -30,7 +34,7 @@ body {
 .result {
     user-select: none;
     color: white;
-    font-size: 60px;
+    font-size: 4cqw;
 }
 .result-animation { animation: fade-in 700ms; }
 
