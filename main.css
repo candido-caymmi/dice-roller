@@ -2,8 +2,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-size: 40px 40px;
     background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
+        linear-gradient(to right, grey 1px, transparent 1px),
+        linear-gradient(to bottom, grey 1px, transparent 1px);
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -13,7 +13,7 @@ h1 {
     font-size: 3cqw;
 }
 
-.dice-container{
+.dice-container {
     display: flex;
     width: 40vw;
     flex-wrap: wrap;
@@ -24,35 +24,93 @@ h1 {
     height: 40px;
 }
 
+.die-container {
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .die {
-    width: 6vw;
-    height: 6vw;
-    margin: 1vw;
-    background-color: #ff0379;
+    width: 50%;
+    height: 50%;
+    background: url(d20.svg) no-repeat center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: solid;
+    color: "red";
 }
-.die-animation { animation: tilt-shaking 140ms; }
+
+.d6 {
+    width: 50%;
+    height: 50%;
+    background: url(d6.svg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: "red";
+}
+
+.d20 {
+    width: 80%;
+    height: 80%;
+    background: url(d20.svg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: "orange";
+}
+
+.die-animation {
+    animation: tilt-shaking 140ms;
+}
 
 .result {
     user-select: none;
     color: white;
-    font-size: 4cqw;
+    font-size: 3cqw;
 }
-.result-animation { animation: fade-in 700ms; }
+
+.result-animation {
+    animation: fade-in 700ms;
+}
 
 @keyframes tilt-shaking {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
-    75% { transform: rotate(-5deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 @keyframes fade-in {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
