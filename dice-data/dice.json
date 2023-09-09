@@ -1,0 +1,12 @@
+{
+    "dice": {
+        "d6": {
+            "targetNumber": 6,
+            "dieCSSClass": "d6"
+        },
+        "d20": {
+            "targetNumber": 20,
+            "dieCSSClass": "d20"
+        }
+    }
+}

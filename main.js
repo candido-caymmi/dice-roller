@@ -1,7 +1,12 @@
+import diceData from './dice-data/dice.json' assert {type: 'json'};
+
 class Die {
-    constructor(dieType) {
-        // Sets target number and CSS class
-        this.dieType = dieType;
+    constructor(dieData) {
+        const { dieCSSClass, targetNumber } = dieData;
+        
+        this.dieCSSClass = dieCSSClass;
+        this.targetNumber = targetNumber;
+        
         this.createDieElements();
 
         // Adds roll event
@@ -17,10 +22,11 @@ class Die {
 
         // Adds appropriate classes to the die's elements
         this.dieContainer.classList.add('die-container');
-        this.dieElement.classList.add(this.dieType.dieCSSClass);
+        this.dieElement.classList.add('die');
+        this.dieElement.classList.add(this.dieCSSClass);
         this.resultElement.classList.add('result');
 
-        // Append divs in the corrent orders
+        // Append divs in the correct order
         this.dieElement.appendChild(this.resultElement);
         this.dieContainer.appendChild(this.dieElement);
     }
@@ -40,19 +46,9 @@ class Die {
     }
 
     roll() {
-        let roll = Math.floor(Math.random() * this.dieType.dieTargetNumber) + 1;
-
+        let roll = Math.floor(Math.random() * this.targetNumber) + 1;
         this.animation();
-
-        // Updates result value
         this.resultElement.innerHTML = roll;
-    }
-}
-
-class DieType {
-    constructor(dieCSSClass, dieTargetNumber){
-        this.dieCSSClass = dieCSSClass;
-        this.dieTargetNumber = dieTargetNumber;
     }
 }
 
@@ -62,8 +58,8 @@ class DiceManager {
         this.allDice = [];
     }
 
-    addNewDie(dieType) {
-        let newDie = new Die(dieType);
+    addNewDie(dieData) {
+        let newDie = new Die(dieData);
 
         // Appends die element to the dice container
         this.diceContainer.appendChild(newDie.dieContainer);
@@ -74,10 +70,12 @@ class DiceManager {
 
     removeDie() {
         // Deletes all elements from the last die of the list (allDice)
-        const toBeRemovedDie = this.allDice.pop();
-        toBeRemovedDie.dieContainer.remove();
-        toBeRemovedDie.dieElement.remove();
-        toBeRemovedDie.resultElement.remove();
+        if(this.allDice.length !== 0){
+            const toBeRemovedDie = this.allDice.pop();
+            toBeRemovedDie.dieContainer.remove();
+            toBeRemovedDie.dieElement.remove();
+            toBeRemovedDie.resultElement.remove();
+        }
     }
 
     rollMultipleDice() {
@@ -98,13 +96,11 @@ function main() {
     const buttonRoll = document.querySelector('.roll');
 
     buttonAddD6.addEventListener('click', () => {
-        const dieType = new DieType('d6', 6);
-        diceManager.addNewDie(dieType);
+        diceManager.addNewDie(diceData.dice.d6);
     })
 
     buttonAddD20.addEventListener('click', () => {
-        const dieType = new DieType('d20', 20);
-        diceManager.addNewDie(dieType);
+        diceManager.addNewDie(diceData.dice.d20);
     })
 
     buttonRoll.addEventListener('click', () => {
@@ -114,7 +110,6 @@ function main() {
     buttonRemove.addEventListener('click', () => {
         diceManager.removeDie();
     });
-
 }
 
 main();
