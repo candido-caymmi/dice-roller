@@ -1,36 +1,78 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-size: 40px 40px;
+    background-size: 30px 30px;
     background-image:
-        linear-gradient(to right, grey 1px, transparent 1px),
-        linear-gradient(to bottom, grey 1px, transparent 1px);
-    display: flex;
-    align-items: center;
-    flex-flow: column;
+        linear-gradient(to right, rgb(230, 219, 255) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(230, 219, 255) 1px, transparent 1px);
+        font-family: 'DM Sans', sans-serif;
 }
 
-h1 {
-    font-size: 3cqw;
+.navbar-brand {
+    font-size: 2em;
+}
+
+.navbar-brand img{
+    width: 36px;
+    padding-bottom: 7px;
+    height: auto;
+}
+
+.options .btn{
+    background-color: black;
+    color: white;
 }
 
 .btn {
-    width: 100px;
-    height: 40px;
+    border-radius: 0;
+    font-weight: 600;
+}
+
+[class*='add-']{
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+[class*='add-']:hover{
+    flex-grow: 2;
+    opacity: 0.8;
+    color: black;
+}
+
+.add-d4 {
+    background-color: rgb(1, 190, 254);
+}
+
+.add-d6 {
+    background-color: rgb(255, 221, 0);
+}
+
+.add-d8 {
+    background-color: rgb(255, 125, 0);
+}
+
+.add-d10 {
+    background-color: rgb(255, 0, 109);
+}
+
+.add-d12 {
+    background-color: rgb(173, 255, 2);
+}
+
+.add-d20 {
+    background-color: rgb(143, 0, 255);
 }
 
 .dice-container {
     display: flex;
-    width: 40vw;
     flex-wrap: wrap;
-    border: solid;
 }
 
 .die-container {
-    width: 10vw;
-    height: 10vw;
+    width: 170px;
+    height: 170px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
 }
 
 .die {
@@ -40,11 +82,34 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    /* border: solid; */
+}
+
+.d4 {
+    background-image: url(img/d4.svg);
+    width: 50%;
+    height: 50%;
 }
 
 .d6 {
     background-image: url(img/d6.svg);
+    width: 50%;
+    height: 50%;
+}
+
+.d8 {
+    background-image: url(img/d8.svg);
+    width: 50%;
+    height: 50%;
+}
+
+.d10 {
+    background-image: url(img/d10.svg);
+    width: 50%;
+    height: 50%;
+}
+
+.d12 {
+    background-image: url(img/d12.svg);
     width: 50%;
     height: 50%;
 }
@@ -62,7 +127,7 @@ h1 {
 .result {
     user-select: none;
     color:white;
-    font-size: 3cqw;
+    font-size: 60px;
 }
 
 .result-animation {

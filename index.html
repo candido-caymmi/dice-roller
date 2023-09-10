@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title> Dice Roller  </title>
+    <title>Dice Roller</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,500;1,9..40,100;1,9..40,200&display=swap"
+        rel="stylesheet">
+
+
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
+
 <body>
 
-    <h1>Dice Roller 🎲</h1>
+    <div class="container d-flex align-items-center justify-content-center">
+        <div class="container">
 
-    <div class="btn-container">
-        <button type="button" class="btn add-d6">Add d6</button>
-        <button type="button" class="btn add-d20">Add d20</button>
-        <button type="button" class="btn remove">Remove die</button>
-        <button type="button" class="btn roll">Roll</button>
+            <div class="row">
+                <nav class="navbar navbar-expand-lg pt-3 pb-0">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logo-icon.png" alt="Logo">
+                            Roll. Some. Dice.
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col">
+                    <div class="row options">
+                        <button type="button" class="col btn roll">ROLL</button>
+                        <button type="button" class="col btn remove">REMOVE DIE</button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="col btn add-d4">D4</button>
+                        <button type="button" class="col btn add-d6">D6</button>
+                        <button type="button" class="col btn add-d8">D8</button>
+                        <button type="button" class="col btn add-d10">D10</button>
+                        <button type="button" class="col btn add-d12">D12</button>
+                        <button type="button" class="col btn add-d20">D20</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center dice-container"></div>
+
+        </div>
+
+    </div>
     </div>
 
-    <div class="dice-container"></div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script type="module" src='main.js'></script>
 </body>
+
 </html>

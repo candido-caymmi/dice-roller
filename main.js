@@ -1,4 +1,8 @@
-import diceData from './dice-data/dice.json' assert {type: 'json'};
+let diceData;
+
+fetch("../dice-data/dice.JSON")
+.then(res => res.json())
+.then(data => diceData = data);
 
 class Die {
     constructor(dieData) {
@@ -85,31 +89,50 @@ class DiceManager {
     }
 }
 
-
 function main() {
     const diceManager = new DiceManager();
-
-    // Dice Add/Remove/Roll buttons
-    const buttonAddD6 = document.querySelector('.add-d6');
-    const buttonAddD20 = document.querySelector('.add-d20');
+ 
+    // Dice Remove/Roll buttons
     const buttonRemove = document.querySelector('.remove');
     const buttonRoll = document.querySelector('.roll');
 
-    buttonAddD6.addEventListener('click', () => {
-        diceManager.addNewDie(diceData.dice.d6);
-    })
+    // Dice Add buttons
+    const buttonAddD4 = document.querySelector('.add-d4');
+    const buttonAddD6 = document.querySelector('.add-d6');
+    const buttonAddD8 = document.querySelector('.add-d8');
+    const buttonAddD10 = document.querySelector('.add-d10');
+    const buttonAddD12 = document.querySelector('.add-d12');
+    const buttonAddD20 = document.querySelector('.add-d20');
 
-    buttonAddD20.addEventListener('click', () => {
-        diceManager.addNewDie(diceData.dice.d20);
-    })
 
     buttonRoll.addEventListener('click', () => {
         diceManager.rollMultipleDice();
     })
-
     buttonRemove.addEventListener('click', () => {
         diceManager.removeDie();
     });
+
+    buttonAddD4.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d4);
+    })
+    buttonAddD6.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d6);
+    })
+    buttonAddD8.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d8);
+    })
+    buttonAddD10.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d10);
+    })
+    buttonAddD12.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d12);
+    })
+    buttonAddD20.addEventListener('click', () => {
+        diceManager.addNewDie(diceData.dice.d20);
+    })
+
+
+    
 }
 
 main();
