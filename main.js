@@ -1,6 +1,6 @@
 let diceData;
 
-fetch("./dice-data.JSON")
+fetch("./dice-data.json")
 .then(res => res.json())
 .then(data => {
     diceData = data;
