@@ -8,25 +8,29 @@ body {
 
 .navbar-brand {
     font-size: 3em;
-    font-weight: 200;
 }
 
 .navbar-brand img{
-    width: 36px;
+    width: 44px;
     padding-bottom: 7px;
     height: auto;
+}
+
+.navbar-brand,
+.btn,
+.result {
+    font-weight: 600;
+}
+
+
+.btn {
+    border-radius: 0;
 }
 
 .options .btn{
     background-color: black;
     color: white;
 }
-
-.btn {
-    border-radius: 0;
-    font-weight: 600;
-}
-
 
 [class*='add-']{
     transition: all 0.3s ease-in-out;
@@ -41,23 +45,18 @@ body {
 .add-d4 {
     background-color: rgb(1, 190, 254);
 }
-
 .add-d6 {
     background-color: rgb(255, 221, 0);
 }
-
 .add-d8 {
     background-color: rgb(255, 125, 0);
 }
-
 .add-d10 {
     background-color: rgb(255, 0, 109);
 }
-
 .add-d12 {
     background-color: rgb(173, 255, 2);
 }
-
 .add-d20 {
     background-color: rgb(143, 0, 255);
 }
@@ -90,35 +89,29 @@ body {
     width: 65%;
     height: 65%;
 } 
-
 .d4 .result {
     padding-top: 22px;
 }
-
 .d6 {
     background-image: url(img/d6.svg);
     width: 50%;
     height: 50%;
 }
-
 .d8 {
     background-image: url(img/d8.svg);
     width: 50%;
     height: 50%;
 }
-
 .d10 {
     background-image: url(img/d10.svg);
     width: 70%;
     height: 70%;
 }
-
 .d12 {
     background-image: url(img/d12.svg);
     width: 50%;
     height: 50%;
 }
-
 .d20 {
     background-image: url(img/d20.svg);
     width: 80%;

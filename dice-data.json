@@ -1,0 +1,26 @@
+[
+    {
+        "targetNumber": 4,
+        "dieCSSClass": "d4"
+    },
+    {
+        "targetNumber": 6,
+        "dieCSSClass": "d6"
+    },
+    {
+        "targetNumber": 8,
+        "dieCSSClass": "d8"
+    },
+    {
+        "targetNumber": 10,
+        "dieCSSClass": "d10"
+    },
+    {
+        "targetNumber": 12,
+        "dieCSSClass": "d12"
+    },
+    {
+        "targetNumber": 20,
+        "dieCSSClass": "d20"
+    }
+]
