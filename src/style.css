@@ -85,7 +85,7 @@ body {
 }
 
 .d4 {
-    background-image: url(img/d4.svg);
+    background-image: url(../assets/d4.svg);
     width: 65%;
     height: 65%;
 } 
@@ -93,27 +93,27 @@ body {
     padding-top: 22px;
 }
 .d6 {
-    background-image: url(img/d6.svg);
+    background-image: url(../assets/d6.svg);
     width: 50%;
     height: 50%;
 }
 .d8 {
-    background-image: url(img/d8.svg);
+    background-image: url(../assets/d8.svg);
     width: 50%;
     height: 50%;
 }
 .d10 {
-    background-image: url(img/d10.svg);
+    background-image: url(../assets/d10.svg);
     width: 70%;
     height: 70%;
 }
 .d12 {
-    background-image: url(img/d12.svg);
+    background-image: url(../assets/d12.svg);
     width: 50%;
     height: 50%;
 }
 .d20 {
-    background-image: url(img/d20.svg);
+    background-image: url(../assets/d20.svg);
     width: 80%;
     height: 80%;
 }
