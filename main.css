@@ -7,7 +7,8 @@ body {
 }
 
 .navbar-brand {
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: 200;
 }
 
 .navbar-brand img{
@@ -26,9 +27,9 @@ body {
     font-weight: 600;
 }
 
+
 [class*='add-']{
     transition: all 0.3s ease-in-out;
-    color: white;
 }
 
 [class*='add-']:hover{
@@ -86,8 +87,12 @@ body {
 
 .d4 {
     background-image: url(img/d4.svg);
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 65%;
+} 
+
+.d4 .result {
+    padding-top: 22px;
 }
 
 .d6 {
@@ -104,8 +109,8 @@ body {
 
 .d10 {
     background-image: url(img/d10.svg);
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
 }
 
 .d12 {
